@@ -15,7 +15,7 @@ TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 def get_hizlaria():
-    url = f'https://ahotsak.eus/lezo/'
+    url = f'https://ahotsak.eus/zarautz/'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
     results = soup.find("table")
@@ -27,11 +27,11 @@ def get_hizlaria():
     url_element   = hizlariak[randoma].find(href=True)
     hizlari_datuak = hizlariak[randoma].find_all("td")[1]
     hizlari_izena   = hizlari_datuak.find("a").text
-    #print('https://ahotsak.eus/lezo/'+ url_element['href'])
+    #print('https://ahotsak.eus/zarautz/'+ url_element['href'])
     
 ####
 
-    url_hizlaria = f'https://ahotsak.eus/lezo/'+ url_element['href']
+    url_hizlaria = f'https://ahotsak.eus/zarautz/'+ url_element['href']
     response_hizlaria = requests.get(url_hizlaria)
     soup_hizlaria = BeautifulSoup(response_hizlaria.content, "html.parser")
     results_hizlaria = soup_hizlaria.find_all("table")
