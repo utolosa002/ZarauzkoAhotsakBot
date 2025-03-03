@@ -1,3 +1,3 @@
-# Lezoko Ahotsak Scrapper Bot
+# Zarauzko Ahotsak Scrapper Bot
 
-https://web.telegram.org/k/#@lezokohizkera
+https://t.me/zirikazarautz
